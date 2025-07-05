@@ -2,7 +2,7 @@ import jwt from "jsonwebtoken";
 import { v4 as uuidv4} from "uuid"
 import dateAndTime from "../libs/dateAndTime.js";
 
-export const urlShortendLink = async (req, res) => {
+const urlShortendLink = async (req, res) => {
       try {
         const { url, validity } = req.body;
         let shortcode = req.body.shortcode;
@@ -20,5 +20,6 @@ export const urlShortendLink = async (req, res) => {
       }
 }
 
+export default urlShortendLink;
 
 

@@ -1,9 +1,8 @@
 import express from "express";
-import { urlShortendLink } from "../controllers/url.controller.js";
-import verify from "../middlewares/verify.js";
+import urlShortendLink  from "../controllers/url.controller.js";
 
 const urlRoutes = express.Router();
 
-urlRoutes.post("/send",verify,urlShortendLink);
+urlRoutes.post("/send",urlShortendLink);
 
 export default urlRoutes;
